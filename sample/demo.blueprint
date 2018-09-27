@@ -1,0 +1,4 @@
+get run.sh experiments/cloudlab-demo/code/run.sh
+get $0.tar.gz experiments/cloudlab-demo/input/$0.tar.gz
+bash run.sh $0.tar.gz ndvi-$0.png
+put ndvi-$0.png experiments/cloudlab-demo/output/

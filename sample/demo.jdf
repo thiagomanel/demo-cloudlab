@@ -1,0 +1,61 @@
+job:
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 0.tar.gz experiments/cloudlab-demo/input/0.tar.gz
+bash run.sh 0.tar.gz ndvi-0.png
+put ndvi-0.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 1.tar.gz experiments/cloudlab-demo/input/1.tar.gz
+bash run.sh 1.tar.gz ndvi-1.png
+put ndvi-1.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 2.tar.gz experiments/cloudlab-demo/input/2.tar.gz
+bash run.sh 2.tar.gz ndvi-2.png
+put ndvi-2.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 3.tar.gz experiments/cloudlab-demo/input/3.tar.gz
+bash run.sh 3.tar.gz ndvi-3.png
+put ndvi-3.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 4.tar.gz experiments/cloudlab-demo/input/4.tar.gz
+bash run.sh 4.tar.gz ndvi-4.png
+put ndvi-4.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 5.tar.gz experiments/cloudlab-demo/input/5.tar.gz
+bash run.sh 5.tar.gz ndvi-5.png
+put ndvi-5.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 6.tar.gz experiments/cloudlab-demo/input/6.tar.gz
+bash run.sh 6.tar.gz ndvi-6.png
+put ndvi-6.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 7.tar.gz experiments/cloudlab-demo/input/7.tar.gz
+bash run.sh 7.tar.gz ndvi-7.png
+put ndvi-7.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 8.tar.gz experiments/cloudlab-demo/input/8.tar.gz
+bash run.sh 8.tar.gz ndvi-8.png
+put ndvi-8.png experiments/cloudlab-demo/output/
+
+task:
+get run.sh experiments/cloudlab-demo/code/run.sh
+get 9.tar.gz experiments/cloudlab-demo/input/9.tar.gz
+bash run.sh 9.tar.gz ndvi-9.png
+put ndvi-9.png experiments/cloudlab-demo/output/
+
