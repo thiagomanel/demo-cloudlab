@@ -4,7 +4,7 @@
 # we assume that a given path/input_path.tar.gz after
 # decompressed will generata a directory name path/input/path/ that stores the tiff files and MTL to generate ndvi
 input_path=$1
-input_dir=$(echo $1 | cut -d"." -f1)
+input_dir=$(echo "input/$(echo $1 | cut -d"." -f1)")
 
 # the name of the generated png image
 output_path=$2
@@ -13,6 +13,7 @@ working_dir="./"
 
 function setup {
     apt-get -y update
+    apt-get -y install g++
     apt-get -y install tar
     apt-get -y install make
     apt-get -y install libtiff-dev
@@ -64,8 +65,11 @@ function export_to_png {
 # build dependencies
 setup
 
+mkdir input
+mkdir $input_dir
+
 # descompress input data
-tar xzvf $input_path
+tar xzvf $input_path -C $input_dir
 
 # generate the vegetation index
 generate_ndvi
