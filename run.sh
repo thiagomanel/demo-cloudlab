@@ -25,12 +25,30 @@ function setup {
     #build ndvi dep
     git clone https://github.com/simsab-ufcg/ndvi-gen.git
     cd ndvi-gen
+    cd c++
     make
     cd -
 }
 
 function generate_ndvi {
-    ./ndvi-gen/run $input_dir $working_dir
+    for filename in $input_dir/*
+    do
+        filename_lower=$(echo "$filename" | awk '{print tolower($0)}')
+        
+        if [[ $filename_lower = *"b4"* ]]; then
+            b4_file=$filename_lower
+        fi
+        if [[ $filename_lower = *"b5"* ]]; then
+            b5_file=$filename_lower
+        fi
+        if [[ $filename_lower = *"bqa"* ]]; then
+            bqa_file=$filename_lower
+        fi
+        if [[ $filename_lower = *"mtl"* ]]; then
+            mtl_file=$filename_lower
+        fi
+    done
+    ./ndvi-gen/cplusplust/run $b4_file $b5_file $bqa_file $mtl_file
 }
 
 function export_to_png {
